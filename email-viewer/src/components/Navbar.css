@@ -1,0 +1,24 @@
+#navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+
+    border-bottom: 1px solid #EFEEEF;
+    padding: 1rem;
+    color: #A6A7A7;
+}
+
+#navbar-container .button-container{
+    display: flex;
+    gap: 8px;
+}
+
+#navbar-container .button-container button{
+    border-radius: 0.4rem;
+}
+
+#navbar-container .pagination a {
+    text-decoration: none;
+    color: inherit;
+}
