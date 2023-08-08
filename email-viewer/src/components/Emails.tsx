@@ -7,26 +7,32 @@ const RECIPIENT = "Isabel Bowen";
 const RECIPIENT_EMAIL = "sbtest.isabel@gmail.com";
 
 const Emails = () => {
-  const [activeEmails, setActiveEmails] = useState(dummyData.map(() => false)); // State for checking the current active emails
+  // State for checking the current active emails
+  const [activeEmails, setActiveEmails] = useState(dummyData.map(() => false));
 
   // State for checking the ticked emails
   const [deleteChecked, setDeleteChecked] = useState(
     dummyData.map(() => false)
   );
-  const [selectAllChecked, setselectAllChecked] = useState(false); // State for selecting all email
 
+  // State for selecting all emails
+  const [selectAllChecked, setselectAllChecked] = useState(false);
+
+  // Toggles the active state of an email based on its index in the list.
   const handleEmailHeaderClick = (index: number) => {
     setActiveEmails((prevActiveEmails) =>
       prevActiveEmails.map((active, i) => (i === index ? !active : false))
     );
   };
 
+  // Toggles the checked state of a delete checkbox based on its index in the list.
   const handleDeleteCheckboxClick = (index: number) => {
     setDeleteChecked((prevDeleteChecked) =>
       prevDeleteChecked.map((checked, i) => (i === index ? !checked : checked))
     );
   };
 
+  // Removes emails with checked delete checkboxes from dummyData, updates active emails, and resets checkbox states.
   const handleDeleteButton = () => {
     const updatedData = dummyData.filter((_, index) => !deleteChecked[index]);
 
@@ -37,11 +43,13 @@ const Emails = () => {
     dummyData.length = 0;
     dummyData.push(...updatedData);
 
-    // Reset the deleteChecked array to match the new dummyData length to avoid bug deletion where some indexes are still registered as ticked
+    // Reset the deleteChecked array to match the new dummyData length
     setDeleteChecked(dummyData.map(() => false));
+
     setselectAllChecked(false);
   };
 
+  // Toggles the checked state of all delete checkboxes and updates the select all checkbox state.
   const handleSelectAllClick = () => {
     setDeleteChecked((prevDeleteChecked) =>
       prevDeleteChecked.map(() => !prevDeleteChecked[0])
@@ -86,7 +94,6 @@ const Emails = () => {
           <p>Unread</p>
           <span className="notification-badge">3</span>
         </div>
-
         {/* Display the JSON data to the DOM i.e. The email content/metadata*/}
         {dummyData &&
           dummyData.map((email, index) => {
@@ -158,7 +165,7 @@ const Emails = () => {
                     </div>
                   </div>
                 </div>
-                {/* Display the email content dropdown when clicked */}
+                {/* Display the email content dropdown when clicked (active) */}
                 {activeEmails[index] && (
                   <div className="email-card">
                     <div className="email-card-content">
