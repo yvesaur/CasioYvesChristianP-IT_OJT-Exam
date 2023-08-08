@@ -23,6 +23,11 @@
     color: inherit;
 }
 
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05, 1.05);
+}
+
 .select-all {
     width: 1rem;
     height: 1rem;

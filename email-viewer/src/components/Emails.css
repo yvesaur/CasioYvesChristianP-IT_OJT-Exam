@@ -21,7 +21,8 @@
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
-  }
+    min-width: min-content;
+}
   
 .email-header {
     border: 2px solid #EFEEEF;
@@ -53,6 +54,8 @@
     align-items: center;
     gap: 8px;
 }
+
+
   
 .status-badge {
     display: inline-block;
@@ -79,11 +82,12 @@
   
 .sender-badge {
     display: inline-block;
-    background-color: #C6C6C6;
+    background-color: #8C8C8C;
     color: #f2f2f2;
     border-radius: 50%;
     height: 1.5rem;
     text-align: center;
+    padding: 0.1rem;
 
     display: flex;
     align-items: center;
@@ -91,12 +95,19 @@
     min-width: 1.5rem;
 }
 
+.email-header-content {
+  display: flex;
+  flex-direction: column;
+}
 
 .email-header-content h3, .email-header-content p {
     margin: 0;
     padding: 0;
 }
 
+.fa-grip-vertical {
+  color: #8C8C8C;
+}
 
 .email-header-tags {
  display: flex;
