@@ -6,8 +6,14 @@ const RECIPIENT = "Isabel Bowen";
 const RECIPIENT_EMAIL = "sbtest.isabel@gmail.com";
 
 const Emails = () => {
-  const [isActive, setIsActive] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [activeEmails, setActiveEmails] = useState(dummyData.map(() => false));
+  // const [selectedIndex, setSelectedIndex] = useState(-1);
+
+  const handleEmailHeaderClick = (index: number) => {
+    setActiveEmails((prevActiveEmails) =>
+      prevActiveEmails.map((active, i) => (i === index ? !active : false))
+    );
+  };
 
   return (
     <div id="email-container">
@@ -24,14 +30,7 @@ const Emails = () => {
               <div
                 className="email-header"
                 onClick={() => {
-                  setSelectedIndex(index);
-                  console.log(
-                    `selectedIndex: ${selectedIndex}, index: ${index}`
-                  );
-
-                  if (selectedIndex == index) {
-                    setIsActive(!isActive);
-                  }
+                  handleEmailHeaderClick(index);
                 }}
               >
                 <div>
@@ -46,7 +45,7 @@ const Emails = () => {
                     <div>{email.date.split(" ")[0]} </div>
                     <div>{email.date.split(" ")[1].replace(",", "")}</div>
                   </time>
-                  <span className="sender-badge">JA</span>
+                  <span className="sender-badge">TA</span>
                   <div className="email-header-content">
                     <h3>{email.subject}</h3>
                     <p>
@@ -55,12 +54,38 @@ const Emails = () => {
                     </p>
                   </div>
                 </div>
-                <div className="email-dropdown-button">
-                  <span>3 min.</span>
-                  <span className="fas fa-caret-right"></span>
+                <div>
+                  {!activeEmails[index] && (
+                    <div className="email-header-tags">
+                      {(() => {
+                        const emailTagList = email.tags.split(",");
+                        return (
+                          <>
+                            <div className="tag">{emailTagList[0]}</div>
+                            <div>
+                              <span className="tag">{emailTagList[1]}</span>
+                              <span className="tag tag-count">
+                                {emailTagList.length - 2}+
+                              </span>
+                            </div>
+                          </>
+                        );
+                      })()}
+                    </div>
+                  )}
+
+                  <div className="email-dropdown-button">
+                    <span>3 min.</span>
+                    <span
+                      className={`fas ${
+                        activeEmails[index] ? "fa-caret-down" : "fa-caret-right"
+                      }`}
+                    ></span>
+                  </div>
                 </div>
               </div>
-              {isActive && email.id - 1 == selectedIndex && (
+              {/* Display the email content dropdown when clicked */}
+              {activeEmails[index] && (
                 <div className="email-card">
                   <div className="email-card-content">
                     <h4>{email.sender_name}</h4>

@@ -33,6 +33,11 @@
     justify-content: space-between;
 }
 
+.email-header div:nth-child(2n) {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .email-select {
   width: 1rem;
   height: 1rem;
@@ -63,7 +68,9 @@
   font-weight: bold;
   border-radius: 0.4rem;
   padding: 0.2rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .email-header-time div:last-child {
@@ -90,6 +97,19 @@
     padding: 0;
 }
 
+
+.email-header-tags {
+ display: flex;
+ flex-direction: column;
+ gap: 0.1rem;
+ align-items: flex-end;
+}
+
+.email-header-tags div:last-child{
+  display: flex;
+  gap: 0.1rem;
+}
+
 .email-dropdown-button span:first-child {
   color: #D9CBA3;
   background-color: #FEFADC;
@@ -98,11 +118,25 @@
   min-width: max-content;
 }
 
+.fa-caret-down {
+  margin-left: 0.5rem;
+}
+
 .email-card {
   border: 2px solid #EFEEEF;
   padding: 1rem;
   border-radius: 0.5rem;
   display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .email-card p {
@@ -127,13 +161,15 @@
   height: fit-content;
 }
 
-.email-card-tags .tag {
+.email-card-tags .tag, .email-header-tags .tag {
   border: 2px solid #ADBABD;
   color: #86A0A6;
   background-color: #F7FBFF;
   height: fit-content;
   padding: 0.1rem;
   border-radius: 0.3rem;
+  text-align: center;
+  width: fit-content;
 }
 
 

@@ -5,9 +5,17 @@ const Navbar = () => {
   return (
     <div id="navbar-container">
       <div className="button-container">
-        <input type="checkbox" name="" id="" />
-        <button>SAVE</button>
-        <button>MANAGE FILTERS</button>|<button>DELETE</button>
+        <input type="checkbox" name="selectAll" className="select-all" />
+        <button className="save-button">
+          SAVE <span className="fa fa-save"></span>
+        </button>
+        <button className="filter-button">
+          MANAGE FILTERS <span className="fa fa-filter"></span>
+        </button>
+        |
+        <button className="delete-button">
+          DELETE <span className="fas fa-trash"></span>
+        </button>
       </div>
       <div className="pagination">
         <span>
