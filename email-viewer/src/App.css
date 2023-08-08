@@ -11,4 +11,14 @@ body {
   
 }
 
+@media screen and (max-width: 480px) {
+  html {
+    width: 100%;
+  }
+
+  body {
+    width: 100%;
+  }
+}
+
 

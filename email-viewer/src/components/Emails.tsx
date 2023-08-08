@@ -1,7 +1,7 @@
 import { useState } from "react";
 import dummyData from "../data/dummyData.json";
+import "./Emails-mobile.css";
 import "./Emails.css";
-import "./Navbar.css";
 
 const RECIPIENT = "Isabel Bowen";
 const RECIPIENT_EMAIL = "sbtest.isabel@gmail.com";
