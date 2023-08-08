@@ -14,6 +14,12 @@ LOPHILS INC - IT (OJT) - Frontend Developer Exam (#1)
 
 Welcome to the Email Viewer App! This is a React Vite frontend application made in React, CSS, HTML, TypeScript that allows you to view emails and perform various actions on them.
 
+# Live Demo
+
+---
+
+The demo is hosted using firebase: <a href="https://email-viewer-7e1fa.web.app/">Email Viewer</a>
+
 ## Functionalities
 
 ---
