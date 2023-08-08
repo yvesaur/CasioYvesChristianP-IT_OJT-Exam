@@ -4,8 +4,9 @@
 
 LOPHILS INC - IT (OJT) - Frontend Developer Exam (#1)
 
-Name: Casio, Yves Christian P.
-School: Polytechnic University of the Philippines
+<b>Name:</b> Casio, Yves Christian P.
+<br>
+<b>School:</b> Polytechnic University of the Philippines
 
 # Email Viewer App
 
