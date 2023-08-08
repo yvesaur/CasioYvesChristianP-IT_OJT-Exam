@@ -1,7 +1,5 @@
 # CasioYvesChristianP-IT_OJT-Exam
 
----
-
 LOPHILS INC - IT (OJT) - Frontend Developer Exam (#1)
 
 <b>Name:</b> Casio, Yves Christian P.
@@ -10,20 +8,15 @@ LOPHILS INC - IT (OJT) - Frontend Developer Exam (#1)
 
 # Email Viewer App
 
----
-
 Welcome to the Email Viewer App! This is a React Vite frontend application made in React, CSS, HTML, TypeScript that allows you to view emails and perform various actions on them.
 
 # Live Demo
 
----
-
 The demo is hosted using firebase: <a href="https://email-viewer-7e1fa.web.app/">Email Viewer</a>
+<br>
 <img src="./screenshots/2023-08-09 05_28_01-.png" alt="Screenshot">
 
 ## Functionalities
-
----
 
 This application offers the following functionalities:
 
@@ -36,8 +29,6 @@ This application offers the following functionalities:
 Note: the "Save" button, "Filters" button, and pagination on the landing page are not functional in this version of the application.
 
 ## How to Run Locally
-
----
 
 To run the Email Viewer App locally on your machine, follow these steps:
 
@@ -68,7 +59,5 @@ To run the Email Viewer App locally on your machine, follow these steps:
    You can now explore the Email Viewer App on your local machine. Interact with the functionalities mentioned above to see how they work.
 
 ## Feedback and Contributions
-
----
 
 Feedback and contributions are welcome! If you encounter any issues or have suggestions for improvements, please create an issue in the repository.
