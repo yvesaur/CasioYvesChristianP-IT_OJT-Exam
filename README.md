@@ -19,6 +19,7 @@ Welcome to the Email Viewer App! This is a React Vite frontend application made 
 ---
 
 The demo is hosted using firebase: <a href="https://email-viewer-7e1fa.web.app/">Email Viewer</a>
+<img src="./screenshots/2023-08-09 05_28_01-.png" alt="Screenshot">
 
 ## Functionalities
 
@@ -43,8 +44,8 @@ To run the Email Viewer App locally on your machine, follow these steps:
 1. **Clone the repository:**
 
    ```
-   git clone https://github.com/your-username/email-viewer-app.git
-   cd email-viewer-app/email-viewer
+   git clone (SSH) git@github.com:yvesaur/CasioYvesChristianP-IT_OJT-Exam.git
+   cd CasioYvesChristianP-IT_OJT-Exam/email-viewer
    ```
 
 2. **Install Dependencies:**
